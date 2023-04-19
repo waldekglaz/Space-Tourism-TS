@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import MainNav from "./components/MainNav";
 import Home from "./components/Home";
+import Destinations from "./components/Destinations";
 import Destination from "./components/Destination";
 import Crew from "./components/Crew";
 import Technology from "./components/Technology";
 import NoMatch from "./components/NoMatch";
+import CrewMember from "./components/CrewMember";
+import TechnologyName from "./components/TechnologyName";
 import "./App.css";
 interface Data {
   destinations: string[];
@@ -27,15 +30,21 @@ function App() {
     };
     fetchData();
   }, []);
-
   return (
     <>
       <MainNav data={data} />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="destinations" element={<Destination />} />
-        <Route path="crew" element={<Crew />} />
-        <Route path="technology" element={<Technology />} />
+
+        <Route path="destinations" element={<Destinations data={data.destinations} />}>
+          <Route path=":destination" element={<Destination destinationData={data.destinations} />} />
+        </Route>
+        <Route path="crew" element={<Crew data={data.crew} />}>
+          <Route path=":crewMember" element={<CrewMember crewData={data.crew} />} />
+        </Route>
+        <Route path="technology" element={<Technology data={data.technology} />}>
+          <Route path=":technologyName" element={<TechnologyName technologyData={data.technology} />} />
+        </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>
     </>
