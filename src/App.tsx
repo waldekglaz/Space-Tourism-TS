@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+import MainNav from "./components/MainNav";
 import Home from "./components/Home";
 import Destination from "./components/Destination";
 import Crew from "./components/Crew";
@@ -29,16 +30,10 @@ function App() {
 
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/destination">Destination</Link>
-        <Link to="/crew">Crew</Link>
-        <Link to="/technology">Technology</Link>
-      </nav>
-
+      <MainNav data={data} />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="destination" element={<Destination />} />
+        <Route path="destinations" element={<Destination />} />
         <Route path="crew" element={<Crew />} />
         <Route path="technology" element={<Technology />} />
         <Route path="*" element={<NoMatch />} />
