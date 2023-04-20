@@ -6,7 +6,11 @@ const InnerNav = ({ data }) => {
     <nav>
       <ul>
         {data.map((el) => {
-          return <NavLink to={el.name}>{el.name}</NavLink>;
+          return (
+            <NavLink key={el.name} to={el.name}>
+              {el.name}
+            </NavLink>
+          );
         })}
       </ul>
     </nav>

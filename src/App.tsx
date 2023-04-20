@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import MainNav from "./components/MainNav";
 import Home from "./components/Home";
 import Destinations from "./components/Destinations";
@@ -16,6 +16,7 @@ interface Data {
   technology: string[];
 }
 function App() {
+  const shouldRedirect = true;
   const [data, setData] = useState<Data>({
     destinations: [],
     crew: [],
@@ -30,14 +31,15 @@ function App() {
     };
     fetchData();
   }, []);
+
   return (
     <>
       <MainNav data={data} />
       <Routes>
         <Route index element={<Home />} />
-
+        {/* ----- TODO render dynamically ----- */}
         <Route path="destinations" element={<Destinations data={data.destinations} />}>
-          <Route path=":destination" element={<Destination destinationData={data.destinations} />} />
+          <Route path=":destination" element={<Destination data={data.destinations} />} />
         </Route>
         <Route path="crew" element={<Crew data={data.crew} />}>
           <Route path=":crewMember" element={<CrewMember crewData={data.crew} />} />
