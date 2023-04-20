@@ -9,7 +9,13 @@ interface MainNavData {
 }
 
 const MainNav: FC<MainNavData> = ({ data }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMenuHandler = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMenuHandler = () => {
+    setIsMobileMenuOpen(false);
+  };
   const navItems: string[] = [];
   const navItemsGenerator = () => {
     for (const item in data) {
@@ -20,20 +26,20 @@ const MainNav: FC<MainNavData> = ({ data }) => {
   return (
     <nav className="nav">
       <img src={Logo} aria-hidden="true" className="nav__logo" />
-      <div className="nav__items">
+      <div onClick={closeMenuHandler} className="nav__items">
         <NavLink className="nav__item" to="/">
           Home
         </NavLink>
         {navItems.map((item, idx) => {
           return (
-            <NavLink className="nav__item" key={`${idx}`} to={item}>
+            <NavLink onClick={closeMenuHandler} className="nav__item" key={`${idx}`} to={item}>
               {item}
             </NavLink>
           );
         })}
       </div>
 
-      <button type="button" className="mobile-menu-btn">
+      <button onClick={toggleMenuHandler} type="button" className="mobile-menu-btn">
         <img src={isMobileMenuOpen ? CloseIcon : HamburgerIcon} alt="" className="mobile-menu-icon" />
       </button>
     </nav>
