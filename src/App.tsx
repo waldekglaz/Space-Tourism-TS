@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import MainNav from "./components/MainNav";
-import Home from "./components/Home";
+import HomePage from "./pages/HomePage";
 import Destinations from "./components/Destinations";
 import Destination from "./components/Destination";
 import Crew from "./components/Crew";
@@ -9,14 +9,13 @@ import Technology from "./components/Technology";
 import NoMatch from "./components/NoMatch";
 import CrewMember from "./components/CrewMember";
 import TechnologyName from "./components/TechnologyName";
-import "./App.css";
+import "./App.scss";
 interface Data {
   destinations: string[];
   crew: string[];
   technology: string[];
 }
 function App() {
-  const shouldRedirect = true;
   const [data, setData] = useState<Data>({
     destinations: [],
     crew: [],
@@ -36,7 +35,7 @@ function App() {
     <>
       <MainNav data={data} />
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<HomePage />} />
         {/* ----- TODO render dynamically ----- */}
         <Route path="destinations" element={<Destinations data={data.destinations} />}>
           <Route index element={<Navigate to="Moon" />} />
