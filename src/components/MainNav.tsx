@@ -28,19 +28,22 @@ const MainNav: FC<MainNavData> = ({ data }) => {
       <img src={Logo} aria-hidden="true" className="nav__logo" />
       <div onClick={closeMenuHandler} className="nav__items">
         <NavLink className="nav__item" to="/">
-          Home
+          <span className="nav__index">00</span>Home
         </NavLink>
         {navItems.map((item, idx) => {
           return (
             <NavLink onClick={closeMenuHandler} className="nav__item" key={`${idx}`} to={item}>
-              {item}
+              <span className="nav__index">{`0${idx + 1}`}</span>{item}
             </NavLink>
           );
         })}
+        <button onClick={closeMenuHandler} type="button" className="close-btn nav__btn">
+          <img src={CloseIcon} alt="" className="mobile-menu-icon" />
+        </button>
       </div>
 
-      <button onClick={toggleMenuHandler} type="button" className="mobile-menu-btn">
-        <img src={isMobileMenuOpen ? CloseIcon : HamburgerIcon} alt="" className="mobile-menu-icon" />
+      <button onClick={toggleMenuHandler} type="button" className="hamburger-btn nav__btn">
+        <img src={HamburgerIcon} alt="" className="mobile-menu-icon" />
       </button>
     </nav>
   );
