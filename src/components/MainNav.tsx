@@ -26,7 +26,7 @@ const MainNav: FC<MainNavData> = ({ data }) => {
   return (
     <nav className="nav">
       <img src={Logo} aria-hidden="true" className="nav__logo" />
-      <div onClick={closeMenuHandler} className="nav__items">
+      <div onClick={closeMenuHandler} className={isMobileMenuOpen ? "nav__items active" : "nav__items"}>
         <NavLink className="nav__item" to="/">
           <span className="nav__index">00</span>Home
         </NavLink>
@@ -37,12 +37,12 @@ const MainNav: FC<MainNavData> = ({ data }) => {
             </NavLink>
           );
         })}
-        <button onClick={closeMenuHandler} type="button" className="close-btn nav__btn">
+        <button onClick={closeMenuHandler} type="button" className=" nav__btn nav__btn--close">
           <img src={CloseIcon} alt="" className="mobile-menu-icon" />
         </button>
       </div>
 
-      <button onClick={toggleMenuHandler} type="button" className="hamburger-btn nav__btn">
+      <button onClick={toggleMenuHandler} type="button" className="nav__btn--hamburger nav__btn">
         <img src={HamburgerIcon} alt="" className="mobile-menu-icon" />
       </button>
     </nav>

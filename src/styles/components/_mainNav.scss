@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 2.4rem 0;
-  position: relative;
+  width: 100%;
 }
 .nav__logo {
   height: 4rem;
@@ -14,7 +14,7 @@
   top: 0;
   height: 100vh;
   width: 25.4rem;
-  right: 0;
+  right: -25.4rem;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
   font-size: 1.6rem;
@@ -23,13 +23,17 @@
   flex-direction: column;
   padding: 11.8rem 0 0 3.2rem;
 }
+.nav__items.active {
+  right: 0;
+  z-index: 100;
+}
 .nav__item {
   color: $color-white;
   text-decoration: none;
   margin-bottom: 3.2rem;
-  letter-spacing: 2.7px
+  letter-spacing: 2.7px;
 }
-.nav__index{
+.nav__index {
   font-weight: bold;
   margin-right: 1.1rem;
 }
@@ -37,8 +41,37 @@
   background-color: transparent;
   border: none;
 }
-.close-btn{
+.nav__btn--close {
   position: absolute;
-  top:3.4rem;
-  right: 2.64rem
+  top: 3.4rem;
+  right: 2.64rem;
+}
+@media (min-width: 768px) {
+  .nav {
+    padding-top: 0;
+    padding-right: 0;
+  }
+  .nav__logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .nav__items {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    width: auto;
+    padding: 0 4.8rem;
+  }
+  .nav__item {
+    margin: 0 3.7rem 0 0;
+    padding: 3.7rem 0;
+  }
+  .nav__item.active {
+    border-bottom: 3px solid $color-white;
+  }
+  .nav__btn--close,
+  .nav__btn--hamburger,
+  .nav__index {
+    display: none;
+  }
 }
