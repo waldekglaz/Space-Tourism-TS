@@ -2,17 +2,14 @@
   padding-top: 112px;
   padding-bottom: 48px;
   background-image: url("./assets/home/background-home-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 .eyebrow {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2.7px;
   line-height: 19px;
-  margin-bottom: 1.6rem;
+  margin-bottom: 16px;
 }
 .home-page__wrapper {
   margin-bottom: 81px;
@@ -31,4 +28,48 @@
   letter-spacing: 1.25px;
   font-size: 20px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .home-page {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+    padding-top: 202px;
+    padding-bottom: 90px;
+  }
+  .home-page__wrapper {
+    width: 444px;
+    margin: 0 auto 156px;
+  }
+  .eyebrow {
+    font-size: 20px;
+    margin-bottom: 24px;
+    letter-spacing: 3.375px;
+  }
+  .home-page__cta {
+    width: 242px;
+    height: 242px;
+    font-size: 32px;
+    line-height: 242px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-page {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    padding: 131px 165px 131px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 85px;
+  }
+  .home-page__wrapper {
+    margin: 0;
+    text-align: left;
+  }
+  .home-page__cta {
+    margin: 0;
+  }
+  .eyebrow {
+    font-size: 28px;
+    letter-spacing: 4.725px;
+  }
 }
