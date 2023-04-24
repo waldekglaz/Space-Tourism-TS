@@ -1,5 +1,5 @@
 .page {
-  padding: 0 24px 0;
+  padding: 88px 24px 0;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,6 +9,9 @@
   font-family: $font-secondary;
   color: $color-white;
   font-weight: 400;
+  text-transform: uppercase;
+  line-height: 64px;
+  font-size:56px;
 }
 .page__title--large {
   font-size: 80px;
@@ -20,7 +23,16 @@
   font-size: 15px;
   line-height: 25px;
 }
-
+.page__info{
+  color: $color-white;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  margin-bottom:32px;
+  span{
+    margin-right: 18px;
+    opacity: 0.25;
+  }
+}
 @media (min-width: 768px) {
   .page__title--large {
     font-size: 150px;

@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const InnerNav = ({ data }) => {
+const InnerNav = ({ data, className }) => {
   return (
-    <nav>
+    <nav className={`inner__nav ${className}`}>
       <ul>
         {data.map((el) => {
           return (

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import InnerNav from "../components/InnerNav";
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
+
 interface DestintionData {
   description: string;
   distance: string;
@@ -13,11 +14,22 @@ interface Props {
 }
 
 const DestinationsPage: FC<Props> = ({ data }) => {
+  const { destination } = useParams();
+  const destinationData = data.find((el) => el.name === destination);
+
   return (
-    <>
-      <InnerNav data={data} />
-      <Outlet />
-    </>
+    <main>
+      <div className="page destination-page">
+        <div className="page__info">
+          <span>01</span>Pick your destination
+        </div>
+        
+
+        <Outlet context={[destinationData]} ></Outlet>
+        <InnerNav data={data} className="destination-nav" />
+      </div>
+      
+    </main>
   );
 };
 
