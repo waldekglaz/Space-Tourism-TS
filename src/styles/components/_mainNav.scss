@@ -2,40 +2,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.4rem 2.4rem 0;
+  padding: 24px 24px 0;
   width: 100%;
 }
 .nav__logo {
-  height: 4rem;
-  width: 4rem;
+  height: 40px;
+  width: 40px;
 }
 .nav__items {
   position: absolute;
   top: 0;
   height: 100vh;
-  width: 25.4rem;
-  right: -25.4rem;
+  width: 254px;
+  right: -150%;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40.7742px);
-  font-size: 1.6rem;
+  font-size: 16px;
   text-transform: uppercase;
-  display: flex;
   flex-direction: column;
-  padding: 11.8rem 0 0 3.2rem;
+  padding: 118px 0 0 32px;
+  display: none;
 }
+// .nav__items {
+//   display: none;
+// }
 .nav__items.active {
   right: 0;
   z-index: 100;
+  display: flex;
 }
 .nav__item {
   color: $color-white;
   text-decoration: none;
-  margin-bottom: 3.2rem;
+  margin-bottom: 32px;
   letter-spacing: 2.7px;
 }
 .nav__index {
   font-weight: bold;
-  margin-right: 1.1rem;
+  margin-right: 11px;
 }
 .nav__btn {
   background-color: transparent;
@@ -43,8 +47,8 @@
 }
 .nav__btn--close {
   position: absolute;
-  top: 3.4rem;
-  right: 2.64rem;
+  top: 34px;
+  right: 26.4px;
 }
 @media (min-width: 768px) {
   .nav {
@@ -52,19 +56,19 @@
     padding-right: 0;
   }
   .nav__logo {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 48px;
+    height: 48px;
   }
   .nav__items {
     position: static;
     height: auto;
     flex-direction: row;
     width: auto;
-    padding: 0 4.8rem;
+    padding: 0 48px;
   }
   .nav__item {
-    margin: 0 3.7rem 0 0;
-    padding: 3.7rem 0;
+    margin: 0 37px 0 0;
+    padding: 37px 0;
   }
   .nav__item.active {
     border-bottom: 3px solid $color-white;
@@ -77,13 +81,13 @@
 }
 @media (min-width: 1440px) {
   .nav {
-    margin-top: 4rem;
+    margin-top: 40px;
   }
   .nav__index {
     display: inline-block;
   }
   .nav__items {
-    padding: 0 16.5rem 0 12.3rem;
+    padding: 0 165px 0 123px;
   }
   .nav__items::before {
     content: "";

@@ -1,0 +1,18 @@
+.page {
+  padding: 0 2.4rem 0;
+  text-align: center;
+}
+.page__title {
+  font-family: $font-secondary;
+  color: $color-white;
+  font-weight: 400;
+}
+.page__title--large {
+  font-size: 80px;
+  line-height: 100px;
+  margin-bottom: 16px;
+}
+.page__text {
+  font-size: 15px;
+  line-height: 25px;
+}

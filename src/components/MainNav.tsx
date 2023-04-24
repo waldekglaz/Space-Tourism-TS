@@ -33,7 +33,8 @@ const MainNav: FC<MainNavData> = ({ data }) => {
         {navItems.map((item, idx) => {
           return (
             <NavLink onClick={closeMenuHandler} className="nav__item" key={`${idx}`} to={item}>
-              <span className="nav__index">{`0${idx + 1}`}</span>{item}
+              <span className="nav__index">{`0${idx + 1}`}</span>
+              {item}
             </NavLink>
           );
         })}
