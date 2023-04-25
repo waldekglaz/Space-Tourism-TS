@@ -4,7 +4,7 @@ import { useOutletContext } from "react-router-dom";
 
 const Destination = () => {
   const [data] = useOutletContext();
-  const imagePath = `/src/assets/destination/${data.images.png.split("/").at(-1)}`;
+  const imagePath = `/assets/destination/${data.images.png.split("/").at(-1)}`;
 
   return (
     <>

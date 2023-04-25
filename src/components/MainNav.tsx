@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "./../assets/shared/logo.svg";
-import HamburgerIcon from "./../assets/shared/icon-hamburger.svg";
-import CloseIcon from "./../assets/shared/icon-close.svg";
+import Logo from "../../public/assets/shared/logo.svg";
+import HamburgerIcon from "../../public/assets/shared/icon-hamburger.svg";
+import CloseIcon from "../../public/assets/shared/icon-close.svg";
 
 interface MainNavData {
   data: { destinations: {}; crew: {}; technology: {} };

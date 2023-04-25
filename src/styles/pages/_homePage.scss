@@ -1,7 +1,7 @@
 .home-page {
   padding-top: 112px;
   padding-bottom: 48px;
-  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-image: url("./../public/assets/home/background-home-mobile.jpg");
   min-height: 100vh;
 }
 .eyebrow {
@@ -36,7 +36,7 @@
 
 @media (min-width: 768px) {
   .home-page {
-    background-image: url("./assets/home/background-home-tablet.jpg");
+    background-image: url("./../public/assets/home/background-home-tablet.jpg");
     padding-top: 202px;
     padding-bottom: 90px;
   }
@@ -59,7 +59,7 @@
 
 @media (min-width: 1024px) {
   .home-page {
-    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-image: url("./../public/assets/home/background-home-desktop.jpg");
     padding: 131px 165px 131px;
     display: flex;
     justify-content: space-around;

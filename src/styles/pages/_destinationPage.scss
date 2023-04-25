@@ -1,27 +1,26 @@
-.destination-page{
-    background-image: url("./assets/destination/background-destination-mobile.jpg");
-    
+.destination-page {
+  background-image: url("./../public/assets/destination/background-destination-mobile.jpg");
+  padding-bottom: 58px;
 }
-.destination-nav{
-    position: absolute;
-   
-    
-    top: 335px;
-    left:0;
-    right:0;
-    padding: 0 69px;
-    ul{
-        display:flex;
+.destination-nav {
+  position: absolute;
+
+  top: 335px;
+  left: 0;
+  right: 0;
+  padding: 0 69px;
+  ul {
+    display: flex;
     justify-content: space-between;
-    width:100%;
-    }
-    a{
-        color: inherit;
-        text-decoration: none;
-        padding-bottom: 8px;
-    }
-    a.active{
-        color: $color-white;
-        border-bottom: 3px solid $color-white;
-    }
+    width: 100%;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 8px;
+  }
+  a.active {
+    color: $color-white;
+    border-bottom: 3px solid $color-white;
+  }
 }
