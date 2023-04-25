@@ -4,11 +4,11 @@
 }
 .destination-nav {
   position: absolute;
-
   top: 335px;
-  left: 0;
-  right: 0;
+  width: 300px;
   padding: 0 69px;
+  left: 50%;
+  transform: translateX(-50%);
   ul {
     display: flex;
     justify-content: space-between;
@@ -22,5 +22,13 @@
   a.active {
     color: $color-white;
     border-bottom: 3px solid $color-white;
+  }
+}
+@media (min-width: 768px) {
+  .destination-page {
+    background-image: url("./../public/assets/destination/background-destination-tablet.jpg");
+    .destination-nav {
+      top: 573px;
+    }
   }
 }

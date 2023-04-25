@@ -11,7 +11,7 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 64px;
-  font-size:56px;
+  font-size: 56px;
 }
 .page__title--large {
   font-size: 80px;
@@ -22,18 +22,28 @@
 .page__text {
   font-size: 15px;
   line-height: 25px;
+  max-width: 500px;
+  margin: 0 auto;
 }
-.page__info{
+.page__info {
   color: $color-white;
   text-transform: uppercase;
   letter-spacing: 2.7px;
-  margin-bottom:32px;
-  span{
+  margin-bottom: 32px;
+  span {
     margin-right: 18px;
     opacity: 0.25;
   }
 }
 @media (min-width: 768px) {
+  .page {
+    padding: 124px 38.5px;
+    min-height: 100vh;
+  }
+  .page__title {
+    font-size: 80px;
+    line-height: 92px;
+  }
   .page__title--large {
     font-size: 150px;
     line-height: 150px;
@@ -41,6 +51,10 @@
   .page__text {
     font-size: 16px;
     line-height: 28px;
+  }
+  .page__info {
+    text-align: left;
+    margin-bottom: 60px;
   }
 }
 @media (min-width: 1024px) {
