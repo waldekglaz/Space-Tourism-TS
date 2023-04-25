@@ -32,3 +32,18 @@
     }
   }
 }
+@media (min-width: 1440px) {
+  .destination-page {
+    background-image: url("./../public/assets/destination/background-destination-desktop.jpg");
+    .destination-nav {
+      top: 310px;
+      left: 60.5vw;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .destination-wrapper {
+    max-width: 1047px;
+    margin: 0 auto;
+  }
+}

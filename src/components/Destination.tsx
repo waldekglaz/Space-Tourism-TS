@@ -7,9 +7,9 @@ const Destination = () => {
   const imagePath = `/assets/destination/${data.images.png.split("/").at(-1)}`;
 
   return (
-    <>
-      <div >
-        <img src={imagePath} alt={data.name} className="destination__img" />
+    <div className="destination-wrapper">
+      <img src={imagePath} alt={data.name} className="destination__img" />
+      <div className="destination__text-wrapper">
         <h1 className="page__title">{data.name}</h1>
         <p className="page__text">{data.description}</p>
         <hr className="divider" />
@@ -24,7 +24,7 @@ const Destination = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

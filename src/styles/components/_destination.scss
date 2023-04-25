@@ -38,3 +38,27 @@ hr.divider {
     justify-content: space-evenly;
   }
 }
+@media (min-width: 1440px) {
+  .destination-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .destination__img {
+    width: 445px;
+    height: 445px;
+    margin-bottom: 0;
+    // position: absolute;
+    // left: 16vw;
+  }
+  .destination__text-wrapper {
+    // position: absolute;
+    width: 445px;
+    text-align: left;
+    // right: 11.4vw;
+    // top: 381px;
+  }
+  .stats-wrapper {
+    justify-content: flex-start;
+    gap: 80px;
+  }
+}
