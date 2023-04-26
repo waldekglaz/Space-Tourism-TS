@@ -4,10 +4,10 @@ import MainNav from "./components/MainNav";
 import HomePage from "./pages/HomePage";
 import DestinationsPage from "./pages/DestinationsPage";
 import Destination from "./components/Destination";
-import Crew from "./components/Crew";
+import CrewPage from "./pages/CrewPage";
 import Technology from "./components/Technology";
 import NoMatch from "./components/NoMatch";
-import CrewMember from "./components/CrewMember";
+import Crew from "./components/Crew";
 import TechnologyName from "./components/TechnologyName";
 import "./App.scss";
 import jsonData from "../data.json";
@@ -30,9 +30,9 @@ function App() {
           <Route index element={<Navigate to="Moon" />} />
           <Route path=":destination" element={<Destination data={data.destinations} />} />
         </Route>
-        <Route path="crew" element={<Crew data={data.crew} />}>
+        <Route path="crew" element={<CrewPage data={data.crew} />}>
           <Route index element={<Navigate to="Victor Glover" />} />
-          <Route path=":crewMember" element={<CrewMember crewData={data.crew} />} />
+          <Route path=":crewMember" element={<Crew crewData={data.crew} />} />
         </Route>
         <Route path="technology" element={<Technology data={data.technology} />}>
           <Route index element={<Navigate to="Spaceport" />} />

@@ -1,0 +1,51 @@
+.crew-page {
+  padding-bottom: 79px;
+}
+.crew__img {
+  max-width: 327px;
+  max-height: 223px;
+  display: block;
+  margin: 0 auto;
+}
+.crew-wrapper .divider {
+  margin: 0 0 74px;
+}
+
+.crew-wrapper .subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-white;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  opacity: 0.25;
+  mix-blend-mode: normal;
+  margin-bottom: 8px;
+}
+
+.crew-wrapper .page__title--small {
+  margin-bottom: 16px;
+}
+.crew-nav {
+  position: absolute;
+  top: 394px;
+  left: 50%;
+  transform: translateX(-50%);
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+  }
+
+  a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    font-size: 0px;
+    background-color: $color-white;
+    opacity: 0.17;
+  }
+  a.active {
+    opacity: 1;
+  }
+}

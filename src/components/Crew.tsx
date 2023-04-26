@@ -1,13 +1,19 @@
 import React from "react";
-import InnerNav from "./InnerNav";
-import { Outlet } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
-const Crew = ({ data }) => {
+const Crew = () => {
+  const [crewData] = useOutletContext();
+  const imagePath = `/assets/crew/${crewData.images.png.split("/").at(-1)}`;
   return (
-    <>
-      <InnerNav data={data} />
-      <Outlet />
-    </>
+    <div className="crew-wrapper">
+      <img src={imagePath} alt={crewData.name} className="crew__img" />
+      <hr className="divider" />
+      <div className="crew__text-wrapper">
+        <h1 className="subtitle">{crewData.role}</h1>
+        <p className="page__title page__title--small">{crewData.name}</p>
+        <p className="page__text">{crewData.bio}</p>
+      </div>
+    </div>
   );
 };
 

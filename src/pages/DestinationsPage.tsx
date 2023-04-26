@@ -23,12 +23,10 @@ const DestinationsPage: FC<Props> = ({ data }) => {
         <div className="page__info">
           <span>01</span>Pick your destination
         </div>
-        
 
-        <Outlet context={[destinationData]} ></Outlet>
+        <Outlet context={[destinationData]} />
         <InnerNav data={data} className="destination-nav" />
       </div>
-      
     </main>
   );
 };
