@@ -49,3 +49,32 @@
     opacity: 1;
   }
 }
+@media (min-width: 768px) {
+  .crew-page {
+    padding-bottom: 0;
+    min-height: 100vh;
+  }
+  .crew-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .crew__text-wrapper {
+    order: -1;
+    margin: 0 auto 90px;
+    width: 458px;
+  }
+  .crew-wrapper .subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .crew-nav {
+    top: 442px;
+  }
+  .crew__img {
+    max-width: 540px;
+    max-height: 532px;
+  }
+  .crew-wrapper .divider {
+    display: none;
+  }
+}

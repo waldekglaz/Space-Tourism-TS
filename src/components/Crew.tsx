@@ -6,7 +6,7 @@ const Crew = () => {
   const imagePath = `/assets/crew/${crewData.images.png.split("/").at(-1)}`;
   return (
     <div className="crew-wrapper">
-      <img src={imagePath} alt={crewData.name} className="crew__img" />
+      <img src={imagePath} alt={crewData.name} className="crew__img" id={crewData.role.toLowerCase().replace(" ", "-")} />
       <hr className="divider" />
       <div className="crew__text-wrapper">
         <h1 className="subtitle">{crewData.role}</h1>
