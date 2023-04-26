@@ -5,10 +5,11 @@ const InnerNav = ({ data, className }) => {
   return (
     <nav className={`inner__nav ${className}`}>
       <ul>
-        {data.map((el) => {
+        {data.map((el, index) => {
           return (
             <NavLink key={el.name} to={el.name}>
-              {el.name}
+              <span className="inner__name">{el.name}</span>
+              <span className="inner__index">{index + 1}</span>
             </NavLink>
           );
         })}
