@@ -52,3 +52,14 @@
     margin-bottom: 16px;
   }
 }
+@media (min-width: 768px) {
+  .technology-page {
+    background-image: url("./../public/assets/technology/background-technology-tablet.jpg");
+    .page__info {
+      padding-left: 38.5px;
+    }
+    .technology-nav {
+      top: calc(190px + 48vw);
+    }
+  }
+}
