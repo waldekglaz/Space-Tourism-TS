@@ -52,7 +52,7 @@
     font-size: 150px;
     line-height: 150px;
   }
-  .page__title {
+  .page__title--small {
     font-size: 40px;
     line-height: 46px;
   }
@@ -72,9 +72,17 @@
   .page__text {
     font-size: 18px;
     line-height: 32px;
+    text-align: left;
+  }
+  .page__title--small {
+    font-size: 56px;
+    line-height: 64px;
   }
   .page__info {
     font-size: 28px;
     margin-bottom: 97px;
+  }
+  .crew__text-wrapper {
+    text-align: left;
   }
 }

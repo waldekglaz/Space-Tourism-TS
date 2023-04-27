@@ -78,3 +78,40 @@
     display: none;
   }
 }
+@media (min-width: 1440px) {
+  .crew-page {
+    max-height: 100vh;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .crew-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 640px;
+  }
+  .crew-wrapper .subtitle {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  .crew__img {
+    max-width: 615px;
+    max-height: 712px;
+    margin: 0;
+  }
+  .crew__text-wrapper {
+    margin: 0;
+    width: 614px;
+    .page__text {
+      margin: 0;
+      width: 444px;
+      min-height: 162px;
+    }
+  }
+  .crew-nav {
+    left: 167px;
+    top: auto;
+    bottom: 94px;
+    transform: translateX(0);
+  }
+}

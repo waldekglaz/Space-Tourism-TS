@@ -9,8 +9,8 @@ const Crew = () => {
       <img src={imagePath} alt={crewData.name} className="crew__img" id={crewData.role.toLowerCase().replace(" ", "-")} />
       <hr className="divider" />
       <div className="crew__text-wrapper">
-        <h1 className="subtitle">{crewData.role}</h1>
-        <p className="page__title page__title--small">{crewData.name}</p>
+        <h2 className="subtitle">{crewData.role}</h2>
+        <h1 className="page__title page__title--small">{crewData.name}</h1>
         <p className="page__text">{crewData.bio}</p>
       </div>
     </div>
