@@ -36,7 +36,7 @@ function App() {
         </Route>
         <Route path="technology" element={<TechnologyPage data={data.technology} />}>
           <Route index element={<Navigate to="Spaceport" />} />
-          <Route path=":technologyName" element={<Technology technologyData={data.technology} />} />
+          <Route path=":id" element={<Technology technologyData={data.technology} />} />
         </Route>
         <Route path="*" element={<NoMatch />} />
       </Routes>

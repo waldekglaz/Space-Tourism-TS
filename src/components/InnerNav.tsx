@@ -7,10 +7,12 @@ const InnerNav = ({ data, className }) => {
       <ul>
         {data.map((el, index) => {
           return (
-            <NavLink key={el.name} to={el.name}>
-              <span className="inner__name">{el.name}</span>
-              <span className="inner__index">{index + 1}</span>
-            </NavLink>
+            <li>
+              <NavLink key={el.name} to={el.name}>
+                <span className="inner__name">{el.name}</span>
+                <span className="inner__index">{index + 1}</span>
+              </NavLink>
+            </li>
           );
         })}
       </ul>
