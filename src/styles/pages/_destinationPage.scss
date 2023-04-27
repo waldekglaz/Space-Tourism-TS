@@ -19,6 +19,9 @@
     color: inherit;
     text-decoration: none;
     padding-bottom: 8px;
+    &:hover{
+      border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    }
   }
   a.active {
     color: $color-white;
@@ -27,6 +30,7 @@
   .inner__index {
     display: none;
   }
+  
 }
 @media (min-width: 768px) {
   .destination-page {

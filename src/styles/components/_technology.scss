@@ -31,6 +31,9 @@
     justify-content: center;
     font-family: $font-secondary;
     font-size: 16px;
+    &:hover{
+      border-color: $color-white;
+    }
   }
   a.active {
     background-color: $color-white;
