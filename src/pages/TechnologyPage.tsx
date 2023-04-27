@@ -5,7 +5,7 @@ import { Outlet, useParams } from "react-router-dom";
 interface TechnologyData {
   description: string;
   distance: string;
-  images: { png: string; webp: string };
+  images: { portrait: string; landscape: string };
   name: string;
   travel: string;
 }
@@ -16,7 +16,7 @@ const TechnologyPage: FC<Props> = ({ data }) => {
   const { id } = useParams();
 
   const technologyData = data.find((el) => el.name === id);
-  console.log(technologyData, "from page");
+
   return (
     <main className="page technology-page">
       <div>

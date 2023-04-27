@@ -16,7 +16,7 @@
   width: 152px;
   ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   a {
     display: block;
@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     font-family: $font-secondary;
+    font-size: 16px;
   }
   a.active {
     background-color: $color-white;
@@ -58,8 +59,53 @@
     .page__info {
       padding-left: 38.5px;
     }
-    .technology-nav {
-      top: calc(190px + 48vw);
+  }
+  .technology-nav {
+    top: calc(190px + 48vw);
+    width: 210px;
+    a {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
     }
+  }
+}
+@media (min-width: 1440px) {
+  .technology-page {
+    background-image: url("./../public/assets/technology/background-technology-desktop.jpg");
+    padding: inherit 166.5px 101px;
+
+    .page__info {
+      padding-left: 166.5px;
+    }
+  }
+  .technology-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 326.5px;
+  }
+  .technology__text-wrapper {
+    order: -1;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .technology-nav {
+    top: 459px;
+    left: 166.5px;
+    transform: translateX(0);
+    ul {
+      flex-direction: column;
+      gap: 32px;
+    }
+    a {
+      width: 80px;
+      height: 80px;
+      font-size: 32px;
+    }
+  }
+  .technology__img {
+    margin-bottom: 0;
   }
 }

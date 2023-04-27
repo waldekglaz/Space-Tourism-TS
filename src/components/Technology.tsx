@@ -2,12 +2,17 @@ import React from "react";
 import InnerNav from "./InnerNav";
 import { useOutletContext } from "react-router-dom";
 
+interface TechnologyData{
+description: string;
+images:{portrait: string, landscape: string};
+name: string;
+}
+
 const Technology = () => {
-  const [technologyData] = useOutletContext();
+  const [technologyData] = useOutletContext<TechnologyData>();
+  
   const imageLandscapePath = `/assets/technology/${technologyData.images.landscape.split("/").at(-1)}`;
   const imagePortraitPath = `/assets/technology/${technologyData.images.portrait.split("/").at(-1)}`;
-  console.log(technologyData);
-  console.log(imageLandscapePath);
   return (
     <div className="technology-wrapper">
       <picture>
