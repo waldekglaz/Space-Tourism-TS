@@ -83,23 +83,26 @@
 @media (min-width: 1440px) {
   .crew-page {
     background-image: url("./../public/assets/crew/background-crew-desktop.jpg");
+    height: 100vh;
+    
   }
   .crew-wrapper {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-height: 640px;
+    // min-height: 640px;
+    min-height: 100%;
   }
   .crew-wrapper .subtitle {
     font-size: 32px;
     line-height: 37px;
   }
   .crew__img {
-    min-height: 607px;
-    min-width: 453px;
+    
     max-width: 615px;
     max-height: 712px;
     margin: 0;
+    align-self: flex-end;
   }
   .crew__text-wrapper {
     margin: 0;
