@@ -19,13 +19,13 @@ const TechnologyPage: FC<Props> = ({ data }) => {
 
   return (
     <main className="page technology-page">
-      <div>
+      
         <div className="page__info">
           <span>03</span>SPACE LAUNCH 101
         </div>
         <InnerNav data={data} className="technology-nav" />
         <Outlet context={[technologyData, data]} />
-      </div>
+      
     </main>
   );
 };
